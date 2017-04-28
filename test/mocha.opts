@@ -1,0 +1,5 @@
+--bail
+--require ./test/helper.js
+--reporter spec
+--colors
+--recursive
