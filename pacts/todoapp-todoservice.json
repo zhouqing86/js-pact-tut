@@ -1,0 +1,31 @@
+{
+  "consumer": {
+    "name": "TodoApp"
+  },
+  "provider": {
+    "name": "TodoService"
+  },
+  "interactions": [
+    {
+      "description": "a request for get user",
+      "provider_state": "have a matched user",
+      "request": {
+        "method": "GET",
+        "path": "/user/1"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "id": 1,
+          "name": "God"
+        }
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecificationVersion": "2.0.0"
+  }
+}
