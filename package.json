@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "ctest": "mocha --timeout 15000 test/**/consumer-test.js",
-    "ptest": "mocha --timeout 15000 test/**/provider-test.js"
+    "ptest": "mocha --timeout 15000 test/**/provider-test.js",
+    "push": "node test/publishPacts.js"
   },
   "author": "",
   "license": "ISC",

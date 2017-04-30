@@ -52,6 +52,7 @@ describe('Pact Verification', () => {
       providerStatesUrl: 'http://localhost:8081/states',
       providerStatesSetupUrl: 'http://localhost:8081/setup',
       pactUrls: [path.resolve(process.cwd(), './pacts/todoapp-todoservice.json')]
+      // pactUrls: ['http://localhost:8080/pacts/provider/TodoService/consumer/TodoApp/latest']
     }
 
     return verifier.verifyProvider(opts)

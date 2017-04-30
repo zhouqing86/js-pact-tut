@@ -1,0 +1,16 @@
+---
+db:
+  image: postgres:9.4
+  environment:
+    - POSTGRES_USER=pact
+    - POSTGRES_PASSWORD=test
+
+web:
+  image: dius/pact_broker
+  ports: ["8080:80"]
+  links: ["db"]
+  environment:
+    - PACT_BROKER_DATABASE_USERNAME=pact
+    - PACT_BROKER_DATABASE_PASSWORD=test
+    - PACT_BROKER_DATABASE_HOST=db
+    - PACT_BROKER_DATABASE_NAME=pact
