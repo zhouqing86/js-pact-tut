@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "ctest": "mocha --timeout 15000 test/**/consumer-test.js"
+    "ctest": "mocha --timeout 15000 test/**/consumer-test.js",
+    "ptest": "mocha --timeout 15000 test/**/provider-test.js"
   },
   "author": "",
   "license": "ISC",
