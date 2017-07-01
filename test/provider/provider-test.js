@@ -26,17 +26,10 @@ server.get('/user/:id', (req, res) => {
   }));
 });
 
-// Append some extra endpoints to mutate current state of the API
-server.get('/states', (req, res) => {
-  res.json({
-    "TodoApp": ['have a matched user']
-  });
-});
-
 server.post('/setup', (req, res) => {
-  const state = req.body.state
+  const state = req.body.state;
   console.log('state:', state);
-  res.end()
+  res.end();
 });
 
 server.listen(8081, () => {
@@ -49,7 +42,6 @@ describe('Pact Verification', () => {
 
     const opts = {
       providerBaseUrl: 'http://localhost:8081',
-      providerStatesUrl: 'http://localhost:8081/states',
       providerStatesSetupUrl: 'http://localhost:8081/setup',
       pactUrls: [path.resolve(process.cwd(), './pacts/todoapp-todoservice.json')]
       // pactUrls: ['http://localhost:8080/pacts/provider/TodoService/consumer/TodoApp/latest']

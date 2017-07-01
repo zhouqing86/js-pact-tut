@@ -14,7 +14,7 @@
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
     "mocha": "^3.3.0",
-    "pact": "^2.3.4"
+    "pact": "^2.6.0"
   },
   "dependencies": {
     "@pact-foundation/pact-node": "^4.8.3"
